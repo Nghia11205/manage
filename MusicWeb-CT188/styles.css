@@ -1,0 +1,211 @@
+:root {
+    --headerSidebarColor: rgba(0, 0, 0, 1);
+    --inputColor: rgba(242, 242, 242, 1);
+    --subtextColor: rgba(196, 196, 196, 1);
+    --sidebarBtn: rgba(40, 40, 40, 1);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+}
+input{
+    transition: linear 0.5s;
+}
+/* Sidebar */
+.Sidebar{
+    min-height: 100vh;
+    width: 15vw;
+    background-color: var(--headerSidebarColor);
+}
+
+.Sidebar-Logo{
+    padding: 25px;
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+.Sidebar-Logo__IMG{
+    cursor: pointer;
+    width: 100px;
+}
+.Sidebar-Logo__text{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.Sidebar-navlist{
+    font-size: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 45px;
+}
+.Sidebar-navlist__items{
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 15px;
+    padding-left: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+}
+.Sidebar-navlist__items:hover{
+    background-color: var(--sidebarBtn);
+}
+.Sidebar-navlist__items i{
+    color: #FFF;
+}
+.wrapper{
+    width: 100%;
+}
+/* Header */
+.Header{
+    padding: 0px 40px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--headerSidebarColor);
+}
+.Header-searchbox{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--inputColor);
+}
+.Header-searchbox__IMG{
+    cursor: pointer;
+}
+.Header-searchbox__input{
+    background-color: transparent;
+    width: 80%;
+}
+
+.Header-SignLog{
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.Header-SignLog a{
+    padding: 10px 20px;
+    transition: ease 0.2s;
+}
+.Header-SignLog a:last-child{
+    color: black;
+    background-color: var(--inputColor);
+    border-radius: 20px;
+}
+.Header-SignLog a:first-child:hover{
+    color: rgb(185, 80, 185);
+}
+.Header-SignLog a:last-child:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(230, 146, 211);
+}
+
+
+
+
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Mobile & Tablet */
+@media only screen and (max-width: 1023px){
+    .Sidebar-Logo{
+        padding: unset;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+    .Sidebar-Logo__IMG{
+        width: 90%;
+    }
+    .Sidebar-Logo__text{
+        display: none;
+    }
+    .Sidebar-navlist{
+        gap: 50px;
+    }
+    .Sidebar-navlist__items a{
+        display: none;
+    }
+    .Sidebar-navlist__items{
+        justify-content: center;
+        padding: unset;
+        padding: 15px;
+    }
+    .Header{
+        padding: 0px 15px;
+    }
+}
+
+/* Mobie For Function */
+@media only screen and (max-width: 739px) {
+        .Header-SignLog{
+        font-size: 15px;
+        gap: 10px;
+    }
+    .Header-SignLog.active{
+        display: none;
+    }
+    .Header-searchbox__input{
+        display: none;
+        width: 0%;
+    }
+    .Header-searchbox__input.active{
+        display: block;
+        width: 80%;
+    }
+     .main-content {
+        margin: 10px;
+    }
+}
+
+/* PC Low, Ipad Pro */
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .Sidebar-Logo{
+        padding: unset;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+    .Sidebar-Logo__text{
+        display: none;
+    }
+
+    .Sidebar-navlist{
+        margin-top: 20px;
+    }
+    .Sidebar-navlist__items{
+        justify-content: center;
+        padding: unset;
+        padding: 15px;
+    }
+}

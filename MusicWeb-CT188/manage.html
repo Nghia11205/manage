@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manage</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./manage.css" />
+    </head>
+    <body>
+        <section class="Sidebar">
+            <div class="Sidebar-Logo">
+                <img
+                    class="Sidebar-Logo__IMG"
+                    src="./images/logo.png"
+                    alt="Logo"
+                />
+                <h2 class="Sidebar-Logo__text">CT188</h2>
+            </div>
+
+            <ul class="Sidebar-navlist">
+                <li class="Sidebar-navlist__items">
+                    <img src="./images/home.png" alt="SongNote" />
+                    <a href="#">Home</a>
+                </li>
+                <li class="Sidebar-navlist__items">
+                    <i class="fa-solid fa-music"></i>
+                    <a href="#">Manage</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="wrapper">
+            <section class="Header">
+                <div class="Header-searchbox">
+                    <img
+                        class="Header-searchbox__IMG"
+                        src="./images/search.png"
+                        alt="Search"
+                    />
+                    <input
+                        class="Header-searchbox__input"
+                        type="text"
+                        placeholder="Search"
+                    />
+                </div>
+
+                <div class="Header-SignLog">
+                    <a href="#">Sign up</a>
+                    <a href="#">Log In</a>
+                </div>
+            </section>
+
+            <section class="main">
+                <div class="main-content">
+                    <section class="songs">
+                        <h2>Songs</h2>
+                        <div class="songs-container">
+                            <div class="add-song">
+                                <div class="add-icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <ul class="songs__list">
+                                <li class="songs__item">
+                                    <div class="songs-artist">
+                                        <img
+                                            src="./images/img-omemthatlau.jpg"
+                                            alt="artist"
+                                        />
+                                    </div>
+                                    <h3 class="name-song">Ôm Em Thật Lâu</h3>
+                                    <span class="name-artist">MONO</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="genres">
+                        <h2>Genres</h2>
+                        <div class="genres-container">
+                            <div class="add-genres">
+                                <div class="add-icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <ul class="genres__list">
+                                <li class="genres__item">
+                                    <div class="genres-artist">
+                                        <img
+                                            src="./images/img-love1.jpg"
+                                            alt="artist"
+                                        />
+                                        <h3 class="name-genres">Love</h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="popular-artist">
+                        <h2>Explore Popular Artist</h2>
+                        <ul class="popular-artist__list">
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-Mono.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>MONO</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-sontung.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Sơn Tùng MTP</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-soobin.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Soobin Hoàng Sơn</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-quynh.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Phan Mạnh Quỳnh</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-rong.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>RonBoogz</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-jus.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Justatee</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-binz.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Binz</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-nhi.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Hà Nhi</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-den.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Đen Vâu</span>
+                            </li>
+                            <li class="popular-artist__item">
+                                <div class="img-artist">
+                                    <img
+                                        src="./images/img-khoi.jpg"
+                                        alt="artist-popular"
+                                    />
+                                </div>
+                                <span>Khói</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+        </div>
+
+        <div class="modal">
+            <section class="modal__add-song">
+                <div class="modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <h2>Add song</h2>
+                <form class="form-add" autocomplete="off" spellcheck="false">
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Song Title</span>
+                            <input
+                                type="text"
+                                name="title"
+                                id="title"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Artist</span>
+                            <input
+                                type="text"
+                                name="artist"
+                                id="artist"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Genre</span>
+                            <input
+                                type="text"
+                                name="genre"
+                                id="genre"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Attach Song File</span>
+                            <div class="upload">
+                                <i class="fa-solid fa-file-audio"></i>
+                                <span>Tính năng chưa update</span>
+                                <input
+                                    type="file"
+                                    name="song"
+                                    id="song"
+                                    class="form-input"
+                                    hidden
+                                />
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Upload Cover Image</span>
+                            <div class="upload">
+                                <i class="fa-regular fa-image"></i>
+                                <span>Upload or Drop a file</span>
+                                <input
+                                    type="file"
+                                    name="image"
+                                    id="image"
+                                    class="form-input"
+                                    hidden
+                                />
+                            </div>
+                        </label>
+                    </div>
+                    <button class="form-btn">
+                        <span>Add Song</span>
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <div class="modal">
+            <div class="modal__add-genre">
+                <div class="modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <h2>Add song</h2>
+                <form class="form-add" autocomplete="off" spellcheck="false">
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Genre</span>
+                            <input
+                                type="text"
+                                name="genre"
+                                id="genre"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Upload Cover Image</span>
+                            <div class="upload">
+                                <i class="fa-regular fa-image"></i>
+                                <span>Upload or Drop a file</span>
+                                <input
+                                    type="file"
+                                    name="image"
+                                    id="image"
+                                    class="form-input"
+                                    hidden
+                                />
+                            </div>
+                        </label>
+                    </div>
+                    <button class="form-btn">
+                        <span>Add Song</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="toast-container" id="toastContainer"></div>
+        <script src="./manage.js"></script>
+    </body>
+</html>

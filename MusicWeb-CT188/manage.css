@@ -1,0 +1,691 @@
+:root {
+    --headerSidebarColor: rgba(0, 0, 0, 1);
+    --inputColor: rgba(242, 242, 242, 1);
+    --subtextColor: rgba(196, 196, 196, 1);
+    --sidebarBtn: rgba(40, 40, 40, 1);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+}
+input{
+    transition: linear 0.5s;
+}
+/* Sidebar */
+.Sidebar{
+    min-height: 100vh;
+    width: 15vw;
+    background-color: var(--headerSidebarColor);
+}
+
+.Sidebar-Logo{
+    padding: 25px;
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+.Sidebar-Logo__IMG{
+    cursor: pointer;
+    width: 100px;
+}
+.Sidebar-Logo__text{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.Sidebar-navlist{
+    font-size: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 45px;
+}
+.Sidebar-navlist__items{
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 15px;
+    padding-left: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+}
+.Sidebar-navlist__items:hover{
+    background-color: var(--sidebarBtn);
+}
+.Sidebar-navlist__items i{
+    color: #FFF;
+}
+.wrapper{
+    width: 100%;
+}
+/* Header */
+.Header{
+    padding: 0px 40px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--headerSidebarColor);
+}
+.Header-searchbox{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--inputColor);
+}
+.Header-searchbox__IMG{
+    cursor: pointer;
+}
+.Header-searchbox__input{
+    background-color: transparent;
+    width: 80%;
+}
+
+.Header-SignLog{
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.Header-SignLog a{
+    padding: 10px 20px;
+    transition: ease 0.2s;
+}
+.Header-SignLog a:last-child{
+    color: black;
+    background-color: var(--inputColor);
+    border-radius: 20px;
+}
+.Header-SignLog a:first-child:hover{
+    color: rgb(185, 80, 185);
+}
+.Header-SignLog a:last-child:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(230, 146, 211);
+}
+/* Main */
+.main{
+    display: flex;
+    background: #191919;
+    min-height: 100vh;
+}
+.main-content{
+    margin: 34px 55px 21px 22px;
+    width: 100%;
+}
+.main-content h2{
+    width: 100%;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #fff
+}
+.songs-container, .genres-container{
+    margin-top: 20px;
+    display: flex;
+    gap: 32px;
+}
+.add-song, .add-genres{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 158px;
+    height: 158px;
+    opacity: 0.7;
+    gap: 6px;
+    border-radius: 10px;
+    border: 2px dashed #FFFFFF;
+}
+.add-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+.add-icon {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.songs__list, .genres__list{
+    display: flex;
+    gap:28px 32px;
+    flex-wrap: wrap;
+}
+.songs__item, .genres__item{
+    text-align: center;
+    max-width: 159px;
+    color: #FFFFFF;
+}
+.songs-artist, .genres-artist{
+    width: 159px;
+    height: 158px;
+    border-radius: 10px;
+}
+.songs-artist img, .genres-artist img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.name-song{
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+.name-artist{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 6px;
+}
+.genres-artist{
+    position: relative;
+    width: 161px;
+    height: 158px;
+}
+.name-genres{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.genres{
+    margin-top: 30px;
+}
+.genres-container{
+    gap:25px;
+}
+.genres__list{
+    gap: 30px 25px;
+}
+.popular-artist{
+    margin-top: 30px;
+}
+.popular-artist__list{
+    margin-top: 20px;
+    display: flex;
+    gap: 47px;
+    flex-wrap: wrap;
+}
+.popular-artist__item{
+    height: 88px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-artist{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.img-artist img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.popular-artist__item span{
+    width: 100%;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color:#EAF0FF;
+    margin-top: 5px;
+}
+.songs__list, .genres__list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent;
+}
+
+.songs__list::-webkit-scrollbar,
+.genres__list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.songs__list::-webkit-scrollbar-thumb,
+.genres__list::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 4px;
+}
+
+
+/* Modal */
+.modal{
+    padding: 50px;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.show{
+    opacity: 1;
+    visibility: visible;
+}
+.show .modal__add-song{
+    scale: 1;
+}
+.modal__add-song, .modal__add-genre{
+    position: relative;
+    background: #191919;
+    padding: 40px;
+    border-radius: 20px;
+    overflow-y: auto;
+    scale: 0.5;
+    transition: all 0.5s ease;
+}
+.modal__add-song{
+    max-width: 70vw;
+    min-height: 80vh;
+    height: 90vh;
+}
+.form-add{
+    display: flex;
+    flex-direction: column;
+}
+.modal h2{
+    font-weight: 700;
+    font-size: 25.89px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color:#D9D9D9;
+    margin-bottom: 30px;
+}
+.form-group{
+    margin-bottom: 30px;
+}
+.form-label{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.form-label span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #CECECE;
+}
+.form-input{
+    width: 447px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #FEFEFEC2;
+    background: transparent;
+    padding-left: 15px;
+    color: #CECECE;
+}
+.form-btn{
+    margin-bottom: 40px;
+    background: #B25BF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 136px;
+    height: 39px;
+    gap: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-left: 70%;;
+}
+.form-btn span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #fff;
+}
+.upload{
+    width: 447px;
+    height: 115px;
+    border-radius: 12px;
+    border: 1px solid #FEFEFEC2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    color:#CECECE;
+}
+.upload i{
+    font-size: 70px;
+}
+.modal__add-song::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal__add-song::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 4px;
+}
+.modal-close{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C5C5C5;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.modal-close i{
+    font-size: 30px;
+}
+
+.modal__add-genre{
+    width: 527px;
+    height: 503px;
+    border-radius: 20px;
+}
+.toast-container {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    min-width: 280px;
+    max-width: 360px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: fadeInOut 4s ease forwards;
+    position: relative;
+}
+
+.toast.success {
+    background-color: #4caf50;
+}
+
+.toast.error {
+    background-color: #f44336;
+}
+
+.toast i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.toast .message {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+}
+
+.toast .close-btn {
+  margin-left: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+.toast .close-btn:hover {
+    opacity: 1;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Mobile & Tablet */
+@media only screen and (max-width: 1023px){
+    .Sidebar-Logo{
+        padding: unset;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+    .Sidebar-Logo__IMG{
+        width: 90%;
+    }
+    .Sidebar-Logo__text{
+        display: none;
+    }
+    .Sidebar-navlist{
+        gap: 50px;
+    }
+    .Sidebar-navlist__items a{
+        display: none;
+    }
+    .Sidebar-navlist__items{
+        justify-content: center;
+        padding: unset;
+        padding: 15px;
+    }
+    .Header{
+        padding: 0px 15px;
+    }
+    .main-content {
+        margin: 20px;
+    }
+
+    .modal__add-song, .modal__add-genre {
+        width: 90vw;
+        height: 90vh;
+        padding: 20px;
+    }
+
+    .form-input, .upload {
+        width: 100%;
+    }
+     .form-add {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-input,
+    .upload {
+        width: 100%;
+        height: 48px;
+        font-size: 15px;
+    }
+
+    .upload {
+        height: 100px;
+    }
+
+    .form-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+        margin-left: 0;
+    }
+
+    .form-btn span {
+        font-size: 16px;
+    }
+}
+
+/* Mobie For Function */
+@media only screen and (max-width: 739px) {
+        .Header-SignLog{
+        font-size: 15px;
+        gap: 10px;
+    }
+    .Header-SignLog.active{
+        display: none;
+    }
+    .Header-searchbox__input{
+        display: none;
+        width: 0%;
+    }
+    .Header-searchbox__input.active{
+        display: block;
+        width: 80%;
+    }
+     .main-content {
+        margin: 10px;
+    }
+
+    .songs-container, .genres-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-song, .add-genres {
+        width: 100%;
+        height: 120px;
+    }
+
+    .modal__add-song, .modal__add-genre {
+        width: 95vw;
+        height: 90vh;
+        padding: 20px;
+    }
+
+    .form-input, .upload {
+        width: 100%;
+    }
+
+    .form-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+    }
+    .modal h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .form-input,
+    .upload {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    .upload i {
+        font-size: 50px;
+    }
+
+    .form-label span {
+        font-size: 14px;
+    }
+
+    .form-btn {
+        font-size: 14px;
+        height: 42px;
+    }
+
+    .form-btn span {
+        font-size: 15px;
+    }
+
+    .modal__add-song,
+    .modal__add-genre {
+        padding: 15px;
+        border-radius: 12px;
+    }
+}
+
+/* PC Low, Ipad Pro */
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .Sidebar-Logo{
+        padding: unset;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+    .Sidebar-Logo__text{
+        display: none;
+    }
+
+    .Sidebar-navlist{
+        margin-top: 20px;
+    }
+    .Sidebar-navlist__items{
+        justify-content: center;
+        padding: unset;
+        padding: 15px;
+    }
+      .main-content {
+        margin: 20px;
+    }
+
+    .modal__add-song, .modal__add-genre {
+        width: 85vw;
+        height: 90vh;
+    }
+     .form-input,
+    .upload {
+        width: 99%;
+    }
+    .form-btn{
+        margin-left: 80%;
+    }
+}
+
